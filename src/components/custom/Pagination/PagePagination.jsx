@@ -24,7 +24,7 @@ const PagePagination = ({ page, setPage, last_page, isFetching }) => {
           </Button>
         </PaginationItem>
 
-        {page >= 3 && (
+        {page > 2 && (
           <PaginationItem>
             <Button
               variant="link"
@@ -81,9 +81,12 @@ const PagePagination = ({ page, setPage, last_page, isFetching }) => {
 
         {page + 1 < last_page && (
           <>
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
+            {last_page - page !== 2 && (
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+            )}
+
             <PaginationItem>
               <Button
                 variant="link"

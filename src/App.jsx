@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Home from "@/pages/Home";
 import Authors from "@/pages/dashboard/Authors";
-import DashboardHome from "@/pages/dashboard/DashboardHome";
 
 const queryClient = new QueryClient();
 

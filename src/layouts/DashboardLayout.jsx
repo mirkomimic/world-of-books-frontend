@@ -7,6 +7,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 import { BookOpenText } from "lucide-react";
 import { Link } from "react-router";
 
@@ -14,6 +15,7 @@ const DashboardLayout = ({ children }) => {
   return (
     <>
       <SidebarProvider>
+        <Toaster richColors position="top-right" />
         <DashboardSidebar />
         <div className="w-full p-4">
           <SidebarInset className="rounded-lg">
