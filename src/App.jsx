@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Home from "@/pages/Home";
 import Authors from "@/pages/dashboard/Authors";
+import Books from "@/pages/Books";
+import FadeInWrapper from "@/components/custom/Animations/FadeInWrapper";
+import { BackgroundGradientAnimation } from "@/components/ui/aceternity/BackgroundGradientAnimation";
 
 const queryClient = new QueryClient();
 
@@ -15,15 +18,18 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
 
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard">
-              <Route index element={<Dashboard />} />
-              <Route path="authors" element={<Authors />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <FadeInWrapper>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/books" element={<Books />} />
+              <Route path="/dashboard">
+                <Route index element={<Dashboard />} />
+                <Route path="authors" element={<Authors />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </FadeInWrapper>
       </QueryClientProvider>
     </ThemeProvider>
   );

@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/layouts/MainLayout";
+import HeroSection from "@/sections/HeroSection";
+
 
 const Home = () => {
   return (
     <MainLayout>
-      <div className="text-red-600">test</div>
-      <Button>Button</Button>
+      <HeroSection/>
     </MainLayout>
   );
 };
+
 export default Home;

@@ -43,7 +43,7 @@ export const AuthorsDataTable = ({
 
   return (
     <>
-      <div className="mx-auto mb-2 min-h-[530px] max-w-full rounded-md border md:max-w-10/12">
+      <div className="mx-auto mb-2 min-h-full max-w-full rounded-md border md:max-w-10/12">
         <div className="flex items-center gap-3 border-b p-2">
           <DialogContextProvider>
             <CustomDialog

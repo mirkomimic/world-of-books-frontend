@@ -5,10 +5,10 @@ import { Link } from "react-router";
 
 const Header = ({ nav }) => {
   return (
-    <header className="h-12 border-b">
+    <header className="h-[80px] w-full    ">
       <div className="container mx-auto flex h-full items-center">
-        <Link to="/">
-          <BookOpenText />
+        <Link to="/" className="flex gap-3">
+          <BookOpenText /> <span>WoB</span>
         </Link>
         <div className="mx-auto">{nav}</div>
         <div className="flex items-center space-x-3">

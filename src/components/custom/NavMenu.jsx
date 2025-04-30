@@ -1,29 +1,42 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 
 const NavMenu = () => {
+  const links = [
+    {
+      href: "/",
+      name: "Home",
+    },
+    {
+      href: "/books",
+      name: "Books",
+    },
+    {
+      href: "/dashboard",
+      name: "Dashboard",
+    },
+  ];
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <NavLink to="/">Home</NavLink>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <NavLink to="/dashboard">Dashboard</NavLink>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+        {links.map((link) => (
+          <NavigationMenuItem key={link.name}>
+            <NavigationMenuLink asChild>
+              <NavLink
+                to={link.href}
+                className="text-gray-200/60 hover:bg-transparent hover:text-primary"
+              >
+                {link.name}
+              </NavLink>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );
