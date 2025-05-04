@@ -4,9 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 .active {
-  /* background-color: rgba(128, 128, 128, 0.145); */
-  /* border-bottom: 1px solid white */
-  /* font-weight: bold; */
   @apply font-bold text-primary 
 }
 

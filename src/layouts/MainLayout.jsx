@@ -22,9 +22,7 @@ const MainLayout = ({ children, footer }) => {
       </div> */}
 
       <Header nav={<NavMenu />} />
-      <main className="min-h-screen min-w-full">
-        <div className="container mx-auto">{children}</div>
-      </main>
+      <main className="min-h-screen min-w-full">{children}</main>
       <footer>{footer}</footer>
     </>
   );

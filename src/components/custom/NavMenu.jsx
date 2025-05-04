@@ -30,7 +30,7 @@ const NavMenu = () => {
             <NavigationMenuLink asChild>
               <NavLink
                 to={link.href}
-                className="text-gray-200/60 hover:bg-transparent hover:text-primary"
+                className="text-gray-200/60 hover:bg-transparent hover:text-primary uppercase"
               >
                 {link.name}
               </NavLink>
